@@ -1,0 +1,38 @@
+<!-- Por cada lınea de la entrada, el programa escribira ESGRITO si el texto tiene mas signos de exclamacion
+que letras (del abecedario ingles), y escrito en caso contrario. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function EsONoEs(a){
+            let signo=0,letra=0, i,c='escrito';
+            for(i=0; i<a.length ;i++){
+                if(a.charAt(i)=='!' || !isNaN(parseInt(a.charAt(i)))){
+                    if(a.charAt(i)=='!'){
+                        signo++;
+                    }
+                }
+                else{
+                    letra++;
+                }
+            }
+            if(signo>letra){
+                c='ESGRITO';
+            }
+            return c;
+    }
+        let frase;
+        frase=prompt('ingrese frase','');
+        document.write(EsONoEs(frase));
+
+    </script>
+    
+</body>
+</html>
