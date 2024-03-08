@@ -11,7 +11,7 @@ que letras (del abecedario ingles), y escrito en caso contrario. -->
 </head>
 <body>
     <script>
-        function EsONoEs(a){
+        function EsGrito(a){
             let signo=0,letra=0, i,c='escrito';
             for(i=0; i<a.length ;i++){
                 if(a.charAt(i)=='!' || !isNaN(parseInt(a.charAt(i)))){
@@ -30,7 +30,7 @@ que letras (del abecedario ingles), y escrito en caso contrario. -->
     }
         let frase;
         frase=prompt('ingrese frase','');
-        document.write(EsONoEs(frase));
+        document.write(EsGrito(frase));
 
     </script>
     
