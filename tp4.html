@@ -1,0 +1,51 @@
+<!-- 
+ Diseñar un programa que tenga que dada la fecha del sistema del sistema. 
+Calcular: 
+ cantidad de días que falta para año nuevo con una función llamada CantidaddiasAnioNuevo($fecha)
+ cantidad de meses que la selección Argentina es campeona del mundo una función llamada CantidadMesesCampeon($fecha)
+Cantidad de años de tu nacimiento con una función llamada CantidadAniosNacimiento($fecha)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fecha;
+        fecha= new Date();
+        function CantidaddiasAnioNuevo(fecha){
+            let AnioNuevo,ProximoAnioNuevo;
+            AnioNuevo=fecha.getFullYear()+1;
+            ProximoAnioNuevo = new Date(AnioNuevo, 0, 1);
+            let unDia = 1000 * 60 * 60 * 24;
+            let diferenciaDias = Math.ceil((ProximoAnioNuevo - fecha) / unDia);
+
+            return diferenciaDias;
+        }
+        let DiasRestantes = CantidaddiasAnioNuevo(fecha);
+        document.write("Días restantes para el próximo año nuevo:" + DiasRestantes + '<br>');
+
+        function CantidadMesesCampeon(fecha){
+            let ArgentinaCampeon = new Date(2022, 12, 18);
+            let UnMes = (1000 * 60 * 60 * 24)*30;
+            let DiferenciaMeses = Math.ceil((fecha - ArgentinaCampeon) / UnMes);
+
+            return DiferenciaMeses;
+        }
+        let MesesCampeon = CantidadMesesCampeon(fecha);
+        document.write("meses desde que argentina campeon do mondo:" + MesesCampeon + '<br>');
+        
+        function CantidadAniosNacimiento(fecha){
+            let MiNaciomiento = new Date(2004, 6, 26);
+            let DiferenciaAnios = fecha.getFullYear()-MiNaciomiento.getFullYear();
+            return DiferenciaAnios;
+        }
+        let AniosDiferencia = CantidadAniosNacimiento(fecha);
+        document.write('La cantidad de años desde mi nacimiento es de:' + AniosDiferencia)
+    </script>
+</body>
+</html>
