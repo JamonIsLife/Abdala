@@ -1,0 +1,17 @@
+Problemática:
+1. Se reciben señales a guardar en un vector hasta que ingrese una señal negativa o se pueden
+generar números aleatorios menores a 360.
+o Ej: 100_ 200_50_330_250_180_190_200_150_90_165_240_20_340_ -10 (se guardan 14
+señales)
+o Crear una función getSeniales() que retorne un vector con las señales leídas.
+
+2. Crear una función string que dado un vector de señales, normalice cada señal y encuentre el
+cuadrante correspondiente para cada una de ellas, creando como salida una secuencia en
+letras(string) de los cuadrantes asociados.
+a. Ej: ENTRADA 100_ 200_50_330_250_180_190_200_150_90_165_240_20_340
+b. SALIDA N O N E S O O S O N O S E E
+3. Con la secuencia de cuadrantes anteriores encontrar la cantidad de ciclos completos, es decir
+las veces que se pasa por los cuatro cuadrantes en sentido horario o antihorario.
+a. Ej: NESO o OSEN, ESON o SENO , SONE o ENOS, ONES o NOSE
+4. Crear una función que calcule el porcentaje de ocurrencias de un cuadrante cualquiera.
+• Mostrar el porcentaje que es recorrido cada cuadrante: N, S, E, O.
